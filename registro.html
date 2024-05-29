@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/registro.css">
+    <title>Registro de Usuario</title>
+</head>
+<body>
+    <div class= "barra">
+        <section>
+        <h1>Minimarket La Virgen del Valle</h1>
+        </section>
+    </div>
+    
+    <div class="fondo">
+    <div class="register"> 
+
+     <form action="registrar.php" method="POST">       
+        <h2>Sign In</h2>
+        <label for="Nombre">Ingrese su nombre</label>
+        <input type="text" placeholder="Nombre" name="nombre" required>
+        <label for="Apellido">Ingrese su apellido</label>
+        <input type="text" placeholder="Apellido" name="apellido" required>
+        <label for="Cedula">Cedula:</label>
+        <input type="text" placeholder="Cedula" name="cedula" required>
+        <label for="Nombre_usuario">Nombre de usuario:</label>
+        <input type="text" placeholder="Nombre_usuario" name="usuario" required>
+        <label for="Contrasena">Contraseña:</label>
+        <input type="password" placeholder="Contrasena" name="contrasena" required>      
+        <button type="submit" name="register" value="Enviar">Registrarse</button>
+        <a style="text-decoration:none;" href="login.html" class="boton_secundario">Volver</a></div>
+    </form>
+</body>
+</html>
