@@ -1,11 +1,7 @@
 <?php
 
-    $servidor = "localhost";
-    $usuario = "root";
-    $password = "";
-    $basededatos = "h1";
-
-    $conexion = mysqli_connect("localhost", "root", "", "h1");
+    $conexion = mysqli_connect("localhost", "root", "", "test1");
+    $conexion->set_charset("utf8");
     
     if($conexion)
     {
