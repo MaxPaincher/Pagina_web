@@ -1,0 +1,234 @@
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    
+}
+
+.barra {
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    left: 0;
+    background-color: rgba(55, 111, 197, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-size: cover;
+}
+
+.fondo {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 90.1%;
+    background-image: url('pics/login2.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+
+}
+
+
+.capa_fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.742);
+}
+
+h1 {
+    font-weight: normal;
+    margin-top: 20px;
+    font-size: 28px;
+    color: #fff;
+    margin-left: 10px;
+    text-shadow: 0px 0px 6px rgba(0,0,0,0.5);
+    margin-bottom: 60px;
+}
+
+.carrito {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 100px;
+    margin-left: 50%;
+    width: 50px;
+    height: 50px;
+    
+}
+
+button {
+    position: absolute;
+    background: rgb(255, 0, 0);
+    font-style: oblique;
+    top: -25px;
+    right: 110px;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 10px;
+    border: none;
+    margin: 45px 0px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+    color: white;
+}
+    
+nav {
+    position: flex;
+    margin-top: 70px;
+    background-color: rgba(73, 127, 137, 0.8); /* Adjust the background color to be semi-transparent */
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    backdrop-filter: blur(0.5px); 
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+  }
+  
+  nav li a:hover {
+    background-color: #666;
+  }
+
+:root {
+	--background-color: #59b7d6;
+	--gradient-color1: #076585;
+	--gradient-color2: #000;
+	--text-color: #fff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	/* Change the font below */
+	font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+	/* Use transform:scale to resize the menu (desktop screen) */
+	transform: scale(1);
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	transform-style: preserve-3d;
+	perspective: 500px;
+	margin: auto;
+}
+.container .box {
+	position: relative;
+	width: 275px;
+	height: 275px;
+	/* background: var(--gradient-color2); */
+	transition: 0.5s;
+	transform-style: preserve-3d;
+	overflow: hidden;
+	margin-right: 15px;
+	margin-top: 45px;
+}
+/* Animation: image rotate to right when mouse hover on right side */
+.container:hover .box {
+	transform: rotateY(25deg);
+}
+/* Animation: image rotate to left when mouse hover on left side */
+.container .box:hover ~ .box {
+	transform: rotateY(-25deg);
+}
+/* Animation: image rotate 0 when mouse hover */
+.container .box:hover {
+	transform: rotateY(0deg) scale(1.25);
+	z-index: 1;
+	box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+}
+
+.container .box .imgBox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.container .box .imgBox:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* Color de la imagen al seleccionar (rover) */
+	background: linear-gradient(180deg, var(--gradient-color1), var(--gradient-color2));
+	z-index: 1;
+	opacity: 0;
+	transition: 0.5s;
+	mix-blend-mode: multiply;
+}
+.container .box:hover .imgBox:before {
+	opacity: 1;
+}
+.container .box .imgBox img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.container .box .content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	display: flex;
+	padding: 20px;
+	align-items: flex-end;
+	box-sizing: border-box;
+}
+
+/* Settings of title */
+.container .box .content h2 {
+	color: var(--text-color);
+	transition: 0.5s;
+	/* If u don't want the title to be Capitalized, then delete text-transform: uppercase; below */
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	font-size: 20px;
+	transform: translateY(200px);
+	transition-delay: 0.3s;
+}
+/* Animation: Title flies in from bottom */
+.container .box:hover .content h2 {
+	transform: translateY(0px);
+}
+
+/* Settings of description */
+.container .box .content p {
+	color: var(--text-color);
+	transition: 0.5s;
+	font-size: 14px;
+	transform: translateY(200px);
+	transition-delay: 0.4s;
+}
+/* Animation: Description flies in from bottom */
+.container .box:hover .content p {
+	transform: translateY(0px);
+}
+
+

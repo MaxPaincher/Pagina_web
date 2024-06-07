@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/facturaaa2.css">
+    <title>Agregar producto</title>
+</head>
+<body>
+
+    <section class= "fondo">
+        <div class="capa_fondo"></div>
+        </section>
+
+    <div class= "barra">
+        <header>
+        <a href="inicio.html" style="text-decoration:none;">
+            <h1>Minimarket La Virgen del Valle</h1>
+        </a>
+        <a href="login.html">
+            <button class="salir">Salir</button>
+        </a>
+        <img src="css/pics/R.png" alt="" class="carro">
+        </header>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="proveedores.html">Proveedores</a></li>
+            <li><a href="trabajadores.html">Empleados</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="factura.php">Facturas</a></li>
+          </ul>
+    </nav>
+
+    <div class="fondo">
+    <div class="register"> 
+
+     <form action="registro_factura.php" method="post">       
+        <h2>Agregar Producto</h2>
+        <label for="Nombre">Ingrese el numero de factura</label>
+        <input type="text" placeholder="Numero Factura" name="numero_factura" required>
+        <label for="Apellido">Ingrese el nombre del cliente</label>
+        <input type="text" placeholder="Nombre" name="nombre_cliente" required>
+        <label for="Cedula">Apellido del cliente</label>
+        <input type="text" placeholder="Apellido" name="apellido_cliente" required>
+        <label for="Cedula">Nombre del producto</label>
+        <input type="text" placeholder="Producto" name="producto" required>
+        <label for="Nombre_usuario">Fecha de la compra</label>
+        <input type="text" placeholder="Fecha de la compra" name="fecha" required>
+        <label for="text">Monto del prodcuto</label>
+        <input type="text" placeholder="Monto del producto" name="monto" required>   
+        <label for="text">Id del producto</label>
+        <input type="text" placeholder="Id del producto" name="ID_producto" required>     
+        <button type="submit" name="register_factura" value="Enviar">Anadir</button>
+        <a style="text-decoration:none;" href="factura.php" class="boton_secundario">Volver</a></div>
+    </form>
+</body>
+</html>
